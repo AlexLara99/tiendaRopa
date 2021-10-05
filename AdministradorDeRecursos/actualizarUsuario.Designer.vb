@@ -29,18 +29,21 @@ Partial Class actualizarUsuario
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.btnUpdate = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.txtNombre = New System.Windows.Forms.TextBox()
+        Me.txtApellido = New System.Windows.Forms.TextBox()
+        Me.txtPass = New System.Windows.Forms.TextBox()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.nombreUsuario = New System.Windows.Forms.TextBox()
+        Me.btnBuscar = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(116, 52)
+        Me.Label1.Location = New System.Drawing.Point(157, 149)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(235, 31)
         Me.Label1.TabIndex = 0
@@ -50,7 +53,7 @@ Partial Class actualizarUsuario
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(118, 133)
+        Me.Label2.Location = New System.Drawing.Point(118, 220)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(66, 19)
         Me.Label2.TabIndex = 1
@@ -60,7 +63,7 @@ Partial Class actualizarUsuario
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(118, 185)
+        Me.Label3.Location = New System.Drawing.Point(118, 272)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(67, 19)
         Me.Label3.TabIndex = 2
@@ -70,7 +73,7 @@ Partial Class actualizarUsuario
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(118, 238)
+        Me.Label4.Location = New System.Drawing.Point(118, 325)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(88, 19)
         Me.Label4.TabIndex = 3
@@ -80,7 +83,7 @@ Partial Class actualizarUsuario
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(118, 293)
+        Me.Label5.Location = New System.Drawing.Point(118, 380)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(53, 19)
         Me.Label5.TabIndex = 4
@@ -88,7 +91,7 @@ Partial Class actualizarUsuario
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(122, 361)
+        Me.Button1.Location = New System.Drawing.Point(122, 439)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(108, 34)
         Me.Button1.TabIndex = 5
@@ -97,38 +100,43 @@ Partial Class actualizarUsuario
         '
         'btnUpdate
         '
-        Me.btnUpdate.Location = New System.Drawing.Point(322, 361)
+        Me.btnUpdate.Enabled = False
+        Me.btnUpdate.Location = New System.Drawing.Point(322, 439)
         Me.btnUpdate.Name = "btnUpdate"
         Me.btnUpdate.Size = New System.Drawing.Size(115, 34)
         Me.btnUpdate.TabIndex = 6
         Me.btnUpdate.Text = "Actualizar"
         Me.btnUpdate.UseVisualStyleBackColor = True
         '
-        'TextBox1
+        'txtNombre
         '
-        Me.TextBox1.Location = New System.Drawing.Point(251, 132)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(186, 20)
-        Me.TextBox1.TabIndex = 7
+        Me.txtNombre.Enabled = False
+        Me.txtNombre.Location = New System.Drawing.Point(251, 219)
+        Me.txtNombre.Name = "txtNombre"
+        Me.txtNombre.Size = New System.Drawing.Size(186, 20)
+        Me.txtNombre.TabIndex = 7
         '
-        'TextBox2
+        'txtApellido
         '
-        Me.TextBox2.Location = New System.Drawing.Point(251, 184)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(186, 20)
-        Me.TextBox2.TabIndex = 8
+        Me.txtApellido.Enabled = False
+        Me.txtApellido.Location = New System.Drawing.Point(251, 271)
+        Me.txtApellido.Name = "txtApellido"
+        Me.txtApellido.Size = New System.Drawing.Size(186, 20)
+        Me.txtApellido.TabIndex = 8
         '
-        'TextBox3
+        'txtPass
         '
-        Me.TextBox3.Location = New System.Drawing.Point(251, 237)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(186, 20)
-        Me.TextBox3.TabIndex = 9
+        Me.txtPass.Enabled = False
+        Me.txtPass.Location = New System.Drawing.Point(251, 324)
+        Me.txtPass.Name = "txtPass"
+        Me.txtPass.Size = New System.Drawing.Size(186, 20)
+        Me.txtPass.TabIndex = 9
         '
         'RadioButton1
         '
         Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(251, 296)
+        Me.RadioButton1.Enabled = False
+        Me.RadioButton1.Location = New System.Drawing.Point(251, 383)
         Me.RadioButton1.Name = "RadioButton1"
         Me.RadioButton1.Size = New System.Drawing.Size(34, 17)
         Me.RadioButton1.TabIndex = 10
@@ -139,7 +147,8 @@ Partial Class actualizarUsuario
         'RadioButton2
         '
         Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Location = New System.Drawing.Point(398, 296)
+        Me.RadioButton2.Enabled = False
+        Me.RadioButton2.Location = New System.Drawing.Point(398, 383)
         Me.RadioButton2.Name = "RadioButton2"
         Me.RadioButton2.Size = New System.Drawing.Size(39, 17)
         Me.RadioButton2.TabIndex = 11
@@ -147,17 +156,45 @@ Partial Class actualizarUsuario
         Me.RadioButton2.Text = "No"
         Me.RadioButton2.UseVisualStyleBackColor = True
         '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(56, 66)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(174, 13)
+        Me.Label6.TabIndex = 12
+        Me.Label6.Text = "Escriba aqui el nombre del usuario: "
+        '
+        'nombreUsuario
+        '
+        Me.nombreUsuario.Location = New System.Drawing.Point(251, 63)
+        Me.nombreUsuario.Name = "nombreUsuario"
+        Me.nombreUsuario.Size = New System.Drawing.Size(186, 20)
+        Me.nombreUsuario.TabIndex = 13
+        '
+        'btnBuscar
+        '
+        Me.btnBuscar.Location = New System.Drawing.Point(443, 55)
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Size = New System.Drawing.Size(115, 34)
+        Me.btnBuscar.TabIndex = 14
+        Me.btnBuscar.Text = "Buscar"
+        Me.btnBuscar.UseVisualStyleBackColor = True
+        '
         'actualizarUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.ClientSize = New System.Drawing.Size(555, 450)
+        Me.ClientSize = New System.Drawing.Size(561, 512)
+        Me.Controls.Add(Me.btnBuscar)
+        Me.Controls.Add(Me.nombreUsuario)
+        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.RadioButton2)
         Me.Controls.Add(Me.RadioButton1)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtPass)
+        Me.Controls.Add(Me.txtApellido)
+        Me.Controls.Add(Me.txtNombre)
         Me.Controls.Add(Me.btnUpdate)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label5)
@@ -179,9 +216,12 @@ Partial Class actualizarUsuario
     Friend WithEvents Label5 As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents btnUpdate As Button
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents txtNombre As TextBox
+    Friend WithEvents txtApellido As TextBox
+    Friend WithEvents txtPass As TextBox
     Friend WithEvents RadioButton1 As RadioButton
     Friend WithEvents RadioButton2 As RadioButton
+    Friend WithEvents Label6 As Label
+    Friend WithEvents nombreUsuario As TextBox
+    Friend WithEvents btnBuscar As Button
 End Class

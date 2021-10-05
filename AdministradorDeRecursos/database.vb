@@ -140,9 +140,23 @@ Public Class database
 
 
     End Sub
-    ' devolvera un arraylist con los datos del usuario seleccioando
-    Function cargarUsuarioAct(codigo As Integer)
+    ' devolvera los datos que se podran modificar
+    Function cargarUsuarioAct(nombreUsuario As String)
+        Dim myData As New DataTable
+        Dim myAdapter As New MySqlDataAdapter
+        Dim sql As String = "SELECT nombre, apellido, password, activo FROM usuarios WHERE nombreUsuario = '" + nombreUsuario + "';"
+        Try
+            conn.Open()
+            Dim cmd As MySqlCommand = New MySqlCommand(sql, conn)
+            myAdapter.SelectCommand = cmd
+            myAdapter.Fill(myData)
+            conn.Close()
+            Return myData
 
+        Catch ex As Exception
+            MsgBox("Error: " + ex.ToString)
+            Return False
+        End Try
 
     End Function
 

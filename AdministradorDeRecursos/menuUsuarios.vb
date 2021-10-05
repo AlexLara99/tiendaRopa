@@ -35,9 +35,8 @@ Public Class menuUsuarios
     End Sub
 
     Private Sub btnActualizar_Click(sender As Object, e As EventArgs) Handles btnActualizar.Click
-        'Dim valor As String = listaUsuarios.Rows(1).Cells(0).Value
-        Dim valor As String = listaUsuarios.CurrentCell.Value.ToString()
-        codigo = valor
+
         actualizarUsuario.Visible = True
+
     End Sub
 End Class
